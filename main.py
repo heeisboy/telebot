@@ -26,7 +26,7 @@ def start_bot():
         chat_id = message.chat.id
         func.first_join(user_id=chat_id, name=message.from_user.username, code=message.text[6:])
         bot.send_message(chat_id,
-                         '<b>🌐 Вас приветствует MURMUR SHOP😻</b>\n\n<b>🔥Легендарный магазин!</b>\n\n' \
+                         '<b>🌐 Вас приветствует SHOP</b>\n\n<b>Легендарный магазин!</b>\n\n' \
                          '<b>Наша команда профессионалов всегда поможет Вам скрасить вечер и сделать его незабываемым!</b>\n\n' \
                          '<i>Для того, что бы вернуться в главное меню введите команду</i> <b>/start</b>',
 
@@ -73,7 +73,7 @@ def start_bot():
             bot.edit_message_text(
                 chat_id=chat_id,
                 message_id=message_id,
-                text=f'💊 <b>Выберите товар: </b>',
+                text=f' <b>Выберите товар: </b>',
                 reply_markup=func.menu_section(call.data),
                 parse_mode="html"
             )
